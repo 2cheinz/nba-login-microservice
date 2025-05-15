@@ -21,3 +21,24 @@ if os.path.exists(DATA_FILE):
             user_tokens = json.load(user_file)
         except json.JSONDecodeError:
             print("Invalid JSON, error, please try again!")
+
+# save tokens to file
+def save_tokens():
+    with open(DATA_FILE, 'w') as user_file:
+        json.dump(user_tokens, user_file, indent=2)
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json
+    username = data.get('username')
+
+    token = generate_token()
+    user_tokens[username] = token
+    save_tokens()
+
+    return jsonify({'token': token})
+
+
+# run this on port 5001
+if __name__ == 'main':
+    app.run(port=5001)
