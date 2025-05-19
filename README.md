@@ -27,12 +27,12 @@ Example Call Using Python:
 URL = "http://localhost:5001"
 
 # Login
-username = input("Enter your username to login: ")
-login_response = requests.post(f"{URL}/login", json={"username": username})
-token = login_response.json().get("token")
-print(f"Token received: {token}")
+- username = input("Enter your username to login: ")
+- login_response = requests.post(f"{URL}/login", json={"username": username})
+- token = login_response.json().get("token")
+- print(f"Token received: {token}")
 
 # Validate
-validate_response = requests.post(f"{URL}/validate", json={"token": token})
-print("Validation response:", validate_response.json())
+- validate_response = requests.post(f"{URL}/validate", json={"token": token})
+- print("Validation response:", validate_response.json())
 
