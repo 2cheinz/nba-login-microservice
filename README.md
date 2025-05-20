@@ -38,4 +38,4 @@ URL = "http://localhost:5001"
 
 
 UML Diagram:
-![UML Sequence Diagram](uml-diagram.png)
+![UML Sequence Diagram](uml_diagram.png)
