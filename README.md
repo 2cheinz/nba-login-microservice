@@ -36,3 +36,6 @@ URL = "http://localhost:5001"
 - validate_response = requests.post(f"{URL}/validate", json={"token": token})
 - print("Validation response:", validate_response.json())
 
+
+UML Diagram:
+![UML Sequence Diagram](uml-diagram.png)
